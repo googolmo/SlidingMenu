@@ -22,13 +22,14 @@
         <dependency>
             <groupId>com.google.android</groupId>
             <artifactId>support-v4</artifactId>
-            <version>${android-support.version}</version>
+            <version>r11</version>
         </dependency>
         <dependency>
             <groupId>com.actionbarsherlock</groupId>
             <artifactId>actionbarsherlock</artifactId>
             <type>apklib</type>
-            <version>4.2.0.2</version>
+            <scope>provided</scope>
+            <version>4.2.0.2-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

@@ -32,7 +32,13 @@
             <type>apklib</type>
             <version>${project.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.actionbarsherlock</groupId>
+            <artifactId>actionbarsherlock</artifactId>
+            <type>apklib</type>
+            <version>4.2.0.2-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

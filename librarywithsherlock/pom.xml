@@ -28,7 +28,6 @@
             <groupId>com.actionbarsherlock</groupId>
             <artifactId>actionbarsherlock</artifactId>
             <type>apklib</type>
-            <scope>provided</scope>
             <version>4.2.0.2-SNAPSHOT</version>
         </dependency>
 

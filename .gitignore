@@ -21,3 +21,4 @@ target/
 gen-external-apklibs
 *.iml
 .classpath
+deploy.sh

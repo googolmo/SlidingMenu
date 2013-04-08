@@ -7,7 +7,6 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-
 import com.slidingmenu.lib.R;
 import com.slidingmenu.lib.SlidingMenu;
 

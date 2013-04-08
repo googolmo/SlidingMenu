@@ -6,10 +6,13 @@ with sliding menus like those made popular in the Google+, YouTube, and Facebook
 to use it all you want in your Android apps provided that you cite this project and include the license in your app.
 
 SlidingMenu is currently used in some awesome Android apps. Here's a list of some of them: 
+* [Foursquare][15]
 * [Rdio][8]
 * [Plume][4]
 * [VLC for Android][5]
 * [ESPN ScoreCenter][14]
+* [MLS MatchDay][16]
+* [9GAG][17]
 * [Wunderlist 2][13]
 * [The Verge][6]
 * [MTG Familiar][9]
@@ -172,3 +175,6 @@ License
 [12]: http://forum.xda-developers.com/showthread.php?p=34361296
 [13]: http://bit.ly/xs1sMN
 [14]: https://play.google.com/store/apps/details?id=com.espn.score_center
+[15]: https://play.google.com/store/apps/details?id=com.joelapenna.foursquared
+[16]: https://play.google.com/store/apps/details?id=com.mlssoccer
+[17]: https://play.google.com/store/apps/details?id=com.ninegag.android.app

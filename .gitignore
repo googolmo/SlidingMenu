@@ -14,3 +14,11 @@ gen
 .metadata/
 .metadata
 *.project
+out/
+.idea
+project.properties
+target/
+gen-external-apklibs
+*.iml
+.classpath
+deploy.sh

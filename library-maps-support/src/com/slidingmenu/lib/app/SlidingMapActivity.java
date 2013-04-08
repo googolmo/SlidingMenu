@@ -4,15 +4,16 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+import com.google.android.maps.MapActivity;
 import com.slidingmenu.lib.SlidingMenu;
 
-public class SlidingFragmentActivity extends SherlockFragmentActivity implements SlidingActivityBase {
+public abstract class SlidingMapActivity extends MapActivity implements SlidingActivityBase {
 
 	private SlidingActivityHelper mHelper;
 
 	/* (non-Javadoc)
-	 * @see android.support.v4.app.FragmentActivity#onCreate(android.os.Bundle)
+	 * @see com.google.android.maps.MapActivity#onCreate(android.os.Bundle)
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class SlidingFragmentActivity extends SherlockFragmentActivity implements
 	}
 
 	/* (non-Javadoc)
-	 * @see android.support.v4.app.FragmentActivity#onSaveInstanceState(android.os.Bundle)
+	 * @see android.app.Activity#onSaveInstanceState(android.os.Bundle)
 	 */
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {

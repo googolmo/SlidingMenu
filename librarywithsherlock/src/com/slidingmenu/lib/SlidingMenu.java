@@ -1,7 +1,5 @@
 package com.slidingmenu.lib;
 
-import java.lang.reflect.Method;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -26,8 +24,9 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
-
 import com.slidingmenu.lib.CustomViewAbove.OnPageChangeListener;
+
+import java.lang.reflect.Method;
 
 public class SlidingMenu extends RelativeLayout {
 
@@ -199,7 +198,7 @@ public class SlidingMenu extends RelativeLayout {
 	 */
 	public SlidingMenu(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-
+		
 		LayoutParams behindParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 		mViewBehind = new CustomViewBehind(context);
 		addView(mViewBehind, behindParams);
@@ -323,7 +322,7 @@ public class SlidingMenu extends RelativeLayout {
 			ViewGroup contentParent = (ViewGroup)activity.findViewById(android.R.id.content);
 			View content = contentParent.getChildAt(0);
 			contentParent.removeView(content);
-			contentParent.addView(this, 0, new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+			contentParent.addView(this);
 			setContent(content);
 			// save people from having transparent backgrounds
 			if (content.getBackground() == null)
@@ -566,7 +565,7 @@ public class SlidingMenu extends RelativeLayout {
 	 * @return The margin on the right of the screen that the behind view scrolls to
 	 */
 	public int getBehindOffset() {
-		return ((RelativeLayout.LayoutParams)mViewBehind.getLayoutParams()).rightMargin;
+		return ((LayoutParams)mViewBehind.getLayoutParams()).rightMargin;
 	}
 
 	/**
@@ -654,6 +653,22 @@ public class SlidingMenu extends RelativeLayout {
 	 */
 	public float getBehindScrollScale() {
 		return mViewBehind.getScrollScale();
+	}
+
+	/**
+	 * Gets the touch mode margin threshold
+	 * @return the touch mode margin threshold
+	 */
+	public int getTouchmodeMarginThreshold() {
+		return mViewBehind.getMarginThreshold();
+	}
+
+	/**
+	 * Set the touch mode margin threshold
+	 * @param touchmodeMarginThreshold
+	 */
+	public void setTouchmodeMarginThreshold(int touchmodeMarginThreshold) {
+		mViewBehind.setMarginThreshold(touchmodeMarginThreshold);
 	}
 
 	/**
@@ -916,8 +931,8 @@ public class SlidingMenu extends RelativeLayout {
 			out.writeInt(mItem);
 		}
 
-		public static final Parcelable.Creator<SavedState> CREATOR =
-				new Parcelable.Creator<SavedState>() {
+		public static final Creator<SavedState> CREATOR =
+				new Creator<SavedState>() {
 			public SavedState createFromParcel(Parcel in) {
 				return new SavedState(in);
 			}
